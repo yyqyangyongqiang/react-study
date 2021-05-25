@@ -1,0 +1,14 @@
+.left {
+    display: inline-block;
+    width: 12%;
+    height: 600px;
+    background-color: #959555;
+    padding: 20px;
+}
+.right {
+    float: right;
+    width: 85%;
+    height: 700px;
+    display: inline-block;
+    background-color: #e5e5e5;
+}
