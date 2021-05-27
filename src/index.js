@@ -4,7 +4,7 @@
  * @Autor: 杨永强
  * @Date: 2021-05-14 15:17:25
  * @LastEditors: 杨永强
- * @LastEditTime: 2021-05-25 11:48:45
+ * @LastEditTime: 2021-05-27 17:33:41
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,14 +14,20 @@ import reportWebVitals from './reportWebVitals';
 // import Sum from "./component/case1/Sum"
 // import Biaoge from "./component/case2/biaoge"
 // import ShoppingCart from "./component/case3/shoppingCart"
-import Calculator  from "./component/event/event"
+// import Calculator  from "./component/event/event"
+// import Composition from './component/composition/composition';
+// import CompositionClass from './component/composition/compositionClass';
+import TableCase from './component/tableCase/tableCase';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Sum /> */}
     {/* <Biaoge /> */}
     {/* <ShoppingCart /> */}
-    <Calculator  />
+    {/* <Calculator  /> */}
+    {/* <Composition /> */}
+    {/* <CompositionClass  /> */}
+    <TableCase></TableCase>
   </React.StrictMode>,
   document.getElementById('root')
 );
