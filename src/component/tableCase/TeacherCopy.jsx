@@ -39,35 +39,37 @@ class ProductTable extends Component {
 
     render() {
         let lastProduct = "";
+        let row = [];
+        this.props.product.map((item) => {
+            // 名字筛选
+            if (item.name.indexOf(this.props.filtrate) == -1){
+                return;
+            };
+            // 库存筛选
+            if(this.props.showSotck && !item.stocked) {
+                return;
+            }
+            // 页面展示
+            if (item.category != lastProduct) {
+                lastProduct = item.category;
+                row.push(<ProductCategoryRow titleName={item.category} />);
+            }
+            
+            row.push(< ProductRow keyWord={item}/>);
+        })
+
+
         return (
             <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-                {/* <Fragement> */}
-                {
-                    this.props.product.map((item) => {
-                        // 名字筛选
-                        if (item.name.indexOf(this.props.filtrate) == -1){
-                            return;
-                        };
-                        // 库存筛选
-                        if(this.props.showSotck && !item.stocked) {
-                            return;
-                        }
-                        // 页面展示
-                        if (item.category != lastProduct) {
-                            lastProduct = item.category;
-                            return(
-                                <tr> <ProductCategoryRow titleName={item.category} /> <ProductRow keyWord={item}/></tr>
-                            )
-                        } else {
-                            return (< ProductRow keyWord={item}/>)
-                        }
-                    })
-                }
-                {/* </Fragement> */}
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {row}
+                </tbody>
             </table>
         );
     }
