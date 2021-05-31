@@ -4,7 +4,7 @@
  * @Autor: 杨永强
  * @Date: 2021-05-14 15:17:25
  * @LastEditors: 杨永强
- * @LastEditTime: 2021-05-27 17:33:41
+ * @LastEditTime: 2021-05-28 15:05:57
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -17,7 +17,8 @@ import reportWebVitals from './reportWebVitals';
 // import Calculator  from "./component/event/event"
 // import Composition from './component/composition/composition';
 // import CompositionClass from './component/composition/compositionClass';
-import TableCase from './component/tableCase/tableCase';
+// import TableCase from './component/tableCase/tableCase';
+import TeacherCopy from './component/tableCase/TeacherCopy';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,7 +28,8 @@ ReactDOM.render(
     {/* <Calculator  /> */}
     {/* <Composition /> */}
     {/* <CompositionClass  /> */}
-    <TableCase></TableCase>
+    {/* <TableCase></TableCase> */}
+    <TeacherCopy />
   </React.StrictMode>,
   document.getElementById('root')
 );
